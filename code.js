@@ -1,6 +1,6 @@
 // ═══════════════════════════════════════════════════════════════════════════
 // MERIDIAN DESIGN SYSTEM — Figma Plugin v1.0
-// Products: SparkRamp · StreamOps · ClarityMap  by Meridian
+// Products: SparkRamp · StreamOps · ClarityMap  by Vlad
 // Icons: Lucide (MIT License) | Fonts: Inter → swap to General Sans
 // ═══════════════════════════════════════════════════════════════════════════
 
@@ -1000,7 +1000,7 @@ async function buildNavbar(theme, page) {
   const logoTxt = await makeText(theme.label, BASE_FONT, 'Bold', 18, SHARED.gray900);
   logoArea.appendChild(logoTxt);
 
-  const byTxt = await makeText('by Meridian', BASE_FONT, 'Regular', 11, SHARED.gray400);
+  const byTxt = await makeText('by Vlad', BASE_FONT, 'Regular', 11, SHARED.gray400);
   logoArea.appendChild(byTxt);
 
   comp.appendChild(logoArea);
@@ -1898,7 +1898,7 @@ async function buildFoundationsPage(foundationsPage) {
     const productName = await makeText(theme.label, BASE_FONT, 'Bold', 18, SHARED.white);
     lockup.appendChild(productName);
     lockup.appendChild(makeRect('Rule', 120, 1, SHARED.white, 0, 0.3));
-    const byMeridian = await makeText('by Meridian', BASE_FONT, 'Regular', 12, SHARED.white, 0.6);
+    const byMeridian = await makeText('by Vlad', BASE_FONT, 'Regular', 12, SHARED.white, 0.6);
     lockup.appendChild(byMeridian);
     motionSection.appendChild(lockup);
   }
