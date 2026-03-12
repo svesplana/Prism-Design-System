@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components — Prism Design System</title>
+  <meta name="description" content="Browse all 25+ production-ready Prism components with live previews.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a class="topbar-logo" href="index.html">
+      <div class="topbar-logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <span class="topbar-logo-name">Prism</span>
+      <span class="topbar-logo-version">v1.0</span>
+    </a>
+  </div>
+  <div class="topbar-center">
+    <div class="search-bar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search components, tokens, patterns…">
+      <span class="search-shortcut">⌘K</span>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <a class="topbar-link" href="get-started.html">Get Started</a>
+    <a class="topbar-link" href="components.html">Components</a>
+    <a class="topbar-github" href="https://github.com/svesplana/Prism-Design-System" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      GitHub
+    </a>
+  </div>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-nav">
+      <span class="sidebar-section-label">Overview</span>
+      <a class="sidebar-item" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Home
+      </a>
+      <a class="sidebar-item" href="get-started.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Get Started
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Design</span>
+      <a class="sidebar-item" href="foundations.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+        Foundations
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Components</span>
+      <a class="sidebar-item active" href="components.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        All Components
+        <span class="sidebar-badge">25+</span>
+      </a>
+      <div class="sidebar-sub">
+        <a class="sidebar-item" href="#buttons">Buttons</a>
+        <a class="sidebar-item" href="#badges">Badges</a>
+        <a class="sidebar-item" href="#inputs">Inputs</a>
+        <a class="sidebar-item" href="#toggles">Toggles & Checks</a>
+        <a class="sidebar-item" href="#cards">Cards</a>
+        <a class="sidebar-item" href="#avatars">Avatars</a>
+        <a class="sidebar-item" href="#modals">Modals</a>
+        <a class="sidebar-item" href="#toasts">Toasts</a>
+        <a class="sidebar-item" href="#tooltips">Tooltips</a>
+        <a class="sidebar-item" href="#navigation">Navigation</a>
+        <a class="sidebar-item" href="#tabs">Tabs</a>
+        <a class="sidebar-item" href="#accordion">Accordion</a>
+        <a class="sidebar-item" href="#carousel">Carousel</a>
+        <a class="sidebar-item" href="#progress">Progress</a>
+        <a class="sidebar-item" href="#tables">Tables</a>
+        <a class="sidebar-item" href="#dropdown">Dropdown</a>
+      </div>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Resources</span>
+      <a class="sidebar-item" href="resources.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        Downloads & Tokens
+      </a>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="content">
+      <p class="page-eyebrow">Components</p>
+      <h1 class="page-title">Component Library</h1>
+      <p class="page-lead">25+ production-ready components, each with variant coverage, accessibility baked in, and design tokens throughout.</p>
+
+      <!-- BUTTONS -->
+      <h2 class="section-title" id="buttons">Buttons</h2>
+      <p class="section-desc">Buttons trigger actions. Use the right variant to communicate priority and intent.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner">
+          <button class="demo-btn demo-btn-primary">Primary</button>
+          <button class="demo-btn demo-btn-secondary">Secondary</button>
+          <button class="demo-btn demo-btn-ghost">Ghost</button>
+          <button class="demo-btn demo-btn-danger">Danger</button>
+          <button class="demo-btn demo-btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            With Icon
+          </button>
+          <button class="demo-btn demo-btn-primary" style="opacity:0.4;cursor:not-allowed;" disabled>Disabled</button>
+        </div>
+        <div class="component-preview-label">Button · Variants: Primary, Secondary, Ghost, Danger, Icon, Disabled</div>
+      </div>
+
+      <table class="doc-table">
+        <thead><tr><th>Variant</th><th>When to use</th></tr></thead>
+        <tbody>
+          <tr><td>Primary</td><td>The main action on a page or dialog. Use sparingly — one per context.</td></tr>
+          <tr><td>Secondary</td><td>Supporting actions that sit alongside a primary button.</td></tr>
+          <tr><td>Ghost</td><td>Low-emphasis actions. Common in toolbars or dense UIs.</td></tr>
+          <tr><td>Danger</td><td>Destructive or irreversible actions (delete, remove, revoke).</td></tr>
+        </tbody>
+      </table>
+
+      <div class="divider"></div>
+
+      <!-- BADGES -->
+      <h2 class="section-title" id="badges">Badges</h2>
+      <p class="section-desc">Compact status indicators for state, category, or metadata.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner">
+          <span class="demo-badge demo-badge-primary">Primary</span>
+          <span class="demo-badge demo-badge-success">Success</span>
+          <span class="demo-badge demo-badge-warning">Warning</span>
+          <span class="demo-badge demo-badge-danger">Danger</span>
+          <span class="demo-badge" style="background:#0F1B2D22;color:#0F1B2D;border:1px solid #0F1B2D33;">Neutral</span>
+        </div>
+        <div class="component-preview-label">Badge · Variants: Primary, Success, Warning, Danger, Neutral</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- INPUTS -->
+      <h2 class="section-title" id="inputs">Inputs</h2>
+      <p class="section-desc">Text inputs, textareas, and selects share the same visual language — consistent border, radius, and focus ring.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="flex-direction:column;align-items:flex-start;gap:12px;">
+          <input class="demo-input" type="text" placeholder="Text input — default">
+          <input class="demo-input" type="text" value="Filled value" style="border-color:#6C63FF;">
+          <input class="demo-input" type="text" placeholder="Error state" style="border-color:#EF4444;box-shadow:0 0 0 3px #EF44441A;">
+          <input class="demo-input" type="text" placeholder="Disabled" disabled style="opacity:0.5;cursor:not-allowed;">
+          <textarea class="demo-input" rows="3" placeholder="Textarea — multiline input" style="width:320px;resize:vertical;"></textarea>
+          <select class="demo-input" style="appearance:none;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%239CA3AF%22 stroke-width=%222%22%3E%3Cpolyline points=%226 9 12 15 18 9%22/%3E%3C/svg%3E');background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;">
+            <option>Select an option</option>
+            <option>SparkRamp</option>
+            <option>StreamOps</option>
+            <option>ClarityMap</option>
+          </select>
+        </div>
+        <div class="component-preview-label">Input · States: Default, Focused, Error, Disabled · Types: Text, Textarea, Select</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- TOGGLES -->
+      <h2 class="section-title" id="toggles">Toggles, Checkboxes & Radios</h2>
+      <p class="section-desc">Selection controls for boolean and multi-choice inputs.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="gap:24px;">
+          <!-- Toggle -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+            <div class="demo-toggle"></div>
+            <div class="demo-toggle off"></div>
+            <span style="font-size:12px;color:#9CA3AF;">Toggle</span>
+          </div>
+          <!-- Checkbox -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+                <input type="checkbox" checked style="width:18px;height:18px;accent-color:#6C63FF;">
+                <span style="font-size:14px;color:#0F1B2D;">Checked</span>
+              </label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+                <input type="checkbox" style="width:18px;height:18px;accent-color:#6C63FF;">
+                <span style="font-size:14px;color:#0F1B2D;">Unchecked</span>
+              </label>
+            </div>
+            <span style="font-size:12px;color:#9CA3AF;">Checkbox</span>
+          </div>
+          <!-- Radio -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+                <input type="radio" name="demo-radio" checked style="width:18px;height:18px;accent-color:#6C63FF;">
+                <span style="font-size:14px;color:#0F1B2D;">Option A</span>
+              </label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+                <input type="radio" name="demo-radio" style="width:18px;height:18px;accent-color:#6C63FF;">
+                <span style="font-size:14px;color:#0F1B2D;">Option B</span>
+              </label>
+            </div>
+            <span style="font-size:12px;color:#9CA3AF;">Radio</span>
+          </div>
+        </div>
+        <div class="component-preview-label">Toggle, Checkbox, Radio · States: On/Off, Checked/Unchecked, Selected</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- CARDS -->
+      <h2 class="section-title" id="cards">Cards</h2>
+      <p class="section-desc">Flexible containers for grouping related content. Support titles, descriptions, media, and actions.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="background:#F1F5F9;">
+          <div class="demo-card" style="width:220px;">
+            <h4>SparkRamp</h4>
+            <p style="font-size:13px;color:#6B7280;margin-bottom:14px;">Growth & launch platform for modern SaaS teams.</p>
+            <button class="demo-btn demo-btn-primary" style="padding:8px 16px;font-size:13px;">Learn More</button>
+          </div>
+          <div class="demo-card" style="width:220px;border-color:#6C63FF;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <h4 style="margin:0;">StreamOps</h4>
+              <span class="demo-badge demo-badge-success" style="font-size:10px;">Active</span>
+            </div>
+            <p style="font-size:13px;color:#6B7280;">Workflow automation for operations teams.</p>
+          </div>
+        </div>
+        <div class="component-preview-label">Card · Variants: Default, Bordered, with Badge</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- AVATARS -->
+      <h2 class="section-title" id="avatars">Avatars</h2>
+      <p class="section-desc">User identity display. Supports initials fallback and three sizes.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner">
+          <div class="demo-avatar demo-avatar-sm" style="background:#6C63FF;">JD</div>
+          <div class="demo-avatar" style="background:#E8572A;">SR</div>
+          <div class="demo-avatar demo-avatar-lg" style="background:#2A6BE8;">SO</div>
+          <div class="demo-avatar" style="background:#7B2FD4;">CM</div>
+          <div class="demo-avatar" style="background:#22C55E;">AC</div>
+          <!-- Avatar group -->
+          <div style="display:flex;">
+            <div class="demo-avatar" style="background:#6C63FF;border:2px solid white;margin-right:-10px;">A</div>
+            <div class="demo-avatar" style="background:#E8572A;border:2px solid white;margin-right:-10px;">B</div>
+            <div class="demo-avatar" style="background:#2A6BE8;border:2px solid white;margin-right:-10px;">C</div>
+            <div class="demo-avatar" style="background:#E5E7EB;color:#4B5563;border:2px solid white;font-size:12px;">+5</div>
+          </div>
+        </div>
+        <div class="component-preview-label">Avatar · Sizes: SM, MD, LG · Group</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- MODALS -->
+      <h2 class="section-title" id="modals">Modals</h2>
+      <p class="section-desc">Focused overlays for confirmations, forms, or detail views. Always include a clear dismiss action.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="background:#0F1B2D;">
+          <div style="background:white;border-radius:14px;padding:28px;width:360px;box-shadow:0 20px 60px rgba(0,0,0,0.4);">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+              <h4 style="font-size:16px;font-weight:700;color:#0F1B2D;">Confirm Action</h4>
+              <button style="background:none;border:none;cursor:pointer;color:#9CA3AF;line-height:1;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+            <p style="font-size:14px;color:#6B7280;line-height:1.6;margin-bottom:20px;">Are you sure you want to delete this item? This action cannot be undone.</p>
+            <div style="display:flex;gap:10px;justify-content:flex-end;">
+              <button class="demo-btn demo-btn-ghost" style="padding:8px 16px;font-size:13px;">Cancel</button>
+              <button class="demo-btn demo-btn-danger" style="padding:8px 16px;font-size:13px;">Delete</button>
+            </div>
+          </div>
+        </div>
+        <div class="component-preview-label">Modal · Variant: Confirmation dialog</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- TOASTS -->
+      <h2 class="section-title" id="toasts">Toasts</h2>
+      <p class="section-desc">Brief non-blocking notifications for system feedback. Auto-dismiss after 4–5 seconds.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:12px;background:#0F1B2D;color:white;padding:12px 18px;border-radius:10px;font-size:14px;width:340px;box-shadow:0 4px 20px rgba(0,0,0,0.15);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="flex:1;">Changes saved successfully.</span>
+            <button style="background:none;border:none;color:#64748B;cursor:pointer;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:#0F1B2D;color:white;padding:12px 18px;border-radius:10px;font-size:14px;width:340px;box-shadow:0 4px 20px rgba(0,0,0,0.15);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            <span style="flex:1;">Failed to connect. Please retry.</span>
+            <button style="background:none;border:none;color:#64748B;cursor:pointer;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:#0F1B2D;color:white;padding:12px 18px;border-radius:10px;font-size:14px;width:340px;box-shadow:0 4px 20px rgba(0,0,0,0.15);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span style="flex:1;">Session expires in 5 minutes.</span>
+            <button style="background:none;border:none;color:#64748B;cursor:pointer;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+          </div>
+        </div>
+        <div class="component-preview-label">Toast · Variants: Success, Error, Warning</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- TOOLTIPS -->
+      <h2 class="section-title" id="tooltips">Tooltips</h2>
+      <p class="section-desc">Contextual hints that appear on hover. Keep content short — one line max.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="gap:40px;">
+          <div style="position:relative;display:inline-block;">
+            <button class="demo-btn demo-btn-ghost">Hover me (Top)</button>
+            <div style="position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#0F1B2D;color:white;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;pointer-events:none;">Tooltip on top
+              <div style="position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:#0F1B2D;"></div>
+            </div>
+          </div>
+          <div style="position:relative;display:inline-block;">
+            <button class="demo-btn demo-btn-ghost">Hover me (Bottom)</button>
+            <div style="position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#0F1B2D;color:white;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;pointer-events:none;">Tooltip below
+              <div style="position:absolute;bottom:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-bottom-color:#0F1B2D;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="component-preview-label">Tooltip · Positions: Top, Bottom (Left/Right also available)</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- NAVIGATION -->
+      <h2 class="section-title" id="navigation">Navigation</h2>
+      <p class="section-desc">Navbar and sidebar components for app-level navigation.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="flex-direction:column;padding:0;background:#F1F5F9;">
+          <!-- Mini navbar demo -->
+          <div style="width:100%;background:#0F1B2D;padding:12px 20px;display:flex;align-items:center;gap:20px;">
+            <span style="font-weight:700;color:white;font-size:15px;">Prism</span>
+            <div style="flex:1;display:flex;gap:4px;">
+              <a style="color:#94A3B8;font-size:13px;padding:5px 10px;border-radius:6px;text-decoration:none;">Home</a>
+              <a style="color:white;font-size:13px;padding:5px 10px;border-radius:6px;text-decoration:none;background:#1F3354;">Components</a>
+              <a style="color:#94A3B8;font-size:13px;padding:5px 10px;border-radius:6px;text-decoration:none;">Resources</a>
+            </div>
+            <button class="demo-btn demo-btn-primary" style="padding:6px 14px;font-size:12px;">Get Started</button>
+          </div>
+          <!-- Breadcrumb -->
+          <div style="width:100%;padding:10px 20px;background:white;border-bottom:1px solid #E5E7EB;font-size:13px;color:#9CA3AF;display:flex;gap:6px;align-items:center;">
+            <span style="color:#6C63FF;">Home</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            <span style="color:#6C63FF;">Components</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            <span style="color:#0F1B2D;font-weight:600;">Navigation</span>
+          </div>
+        </div>
+        <div class="component-preview-label">Navbar, Breadcrumb · Dark surface variant</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- TABS -->
+      <h2 class="section-title" id="tabs">Tabs</h2>
+      <p class="section-desc">Organize content into horizontally switched sections. Keep tab labels short (1–2 words).</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="flex-direction:column;align-items:flex-start;padding:24px;">
+          <div style="display:flex;gap:0;border-bottom:2px solid #E5E7EB;width:100%;margin-bottom:20px;">
+            <button style="padding:10px 20px;font-size:14px;font-weight:600;color:#6C63FF;border-bottom:2px solid #6C63FF;margin-bottom:-2px;background:none;border-top:none;border-left:none;border-right:none;cursor:pointer;">Overview</button>
+            <button style="padding:10px 20px;font-size:14px;font-weight:600;color:#9CA3AF;border-bottom:2px solid transparent;margin-bottom:-2px;background:none;border-top:none;border-left:none;border-right:none;cursor:pointer;">Settings</button>
+            <button style="padding:10px 20px;font-size:14px;font-weight:600;color:#9CA3AF;border-bottom:2px solid transparent;margin-bottom:-2px;background:none;border-top:none;border-left:none;border-right:none;cursor:pointer;">Activity</button>
+            <button style="padding:10px 20px;font-size:14px;font-weight:600;color:#9CA3AF;border-bottom:2px solid transparent;margin-bottom:-2px;background:none;border-top:none;border-left:none;border-right:none;cursor:pointer;">Members</button>
+          </div>
+          <p style="font-size:14px;color:#6B7280;margin:0;">Active tab content displays here — switch tabs to navigate between sections.</p>
+        </div>
+        <div class="component-preview-label">Tabs · Underline variant</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ACCORDION -->
+      <h2 class="section-title" id="accordion">Accordion</h2>
+      <p class="section-desc">Collapsible content sections for FAQs, settings panels, or progressive disclosure.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="flex-direction:column;align-items:stretch;padding:0;width:100%;">
+          <div style="border-bottom:1px solid #E5E7EB;">
+            <button style="width:100%;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;background:none;border:none;cursor:pointer;font-size:15px;font-weight:600;color:#0F1B2D;">
+              What is Prism Design System?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+            </button>
+            <div style="padding:0 20px 16px;font-size:14px;color:#6B7280;line-height:1.65;">
+              Prism is Meridian's open design system — a complete set of design tokens, Figma components, and documentation for building beautiful, consistent products across SparkRamp, StreamOps, and ClarityMap.
+            </div>
+          </div>
+          <div style="border-bottom:1px solid #E5E7EB;">
+            <button style="width:100%;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;background:none;border:none;cursor:pointer;font-size:15px;font-weight:600;color:#0F1B2D;">
+              Is it free to use?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+          <div style="border-bottom:1px solid #E5E7EB;">
+            <button style="width:100%;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;background:none;border:none;cursor:pointer;font-size:15px;font-weight:600;color:#0F1B2D;">
+              How do I install the Figma plugin?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="component-preview-label">Accordion · FAQ variant (first item expanded)</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- CAROUSEL -->
+      <h2 class="section-title" id="carousel">Carousel & Image Slider</h2>
+      <p class="section-desc">Horizontally scrollable content containers. Carousels loop card items; image sliders display full-bleed media.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="background:#F1F5F9;position:relative;overflow:hidden;padding:32px;">
+          <!-- Slide -->
+          <div style="display:flex;gap:16px;align-items:center;">
+            <button style="width:40px;height:40px;border-radius:50%;background:white;border:1px solid #E5E7EB;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F1B2D" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div style="display:flex;gap:12px;overflow:hidden;">
+              <div class="demo-card" style="min-width:180px;flex-shrink:0;">
+                <h4 style="margin-bottom:4px;">Slide 1</h4>
+                <p style="font-size:12px;color:#9CA3AF;margin:0;">SparkRamp feature</p>
+              </div>
+              <div class="demo-card" style="min-width:180px;flex-shrink:0;border-color:#6C63FF;">
+                <h4 style="margin-bottom:4px;">Slide 2</h4>
+                <p style="font-size:12px;color:#9CA3AF;margin:0;">StreamOps feature</p>
+              </div>
+            </div>
+            <button style="width:40px;height:40px;border-radius:50%;background:white;border:1px solid #E5E7EB;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F1B2D" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <!-- Dots -->
+          <div style="display:flex;gap:6px;justify-content:center;margin-top:16px;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#6C63FF;"></div>
+            <div style="width:8px;height:8px;border-radius:50%;background:#E5E7EB;"></div>
+            <div style="width:8px;height:8px;border-radius:50%;background:#E5E7EB;"></div>
+          </div>
+        </div>
+        <div class="component-preview-label">Carousel · Card variant with dot indicators</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- PROGRESS -->
+      <h2 class="section-title" id="progress">Progress & Spinner</h2>
+      <p class="section-desc">Visual indicators for loading states and completion progress.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="flex-direction:column;gap:20px;align-items:flex-start;padding:32px;">
+          <!-- Progress bars -->
+          <div style="width:100%;max-width:360px;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;font-size:12px;color:#9CA3AF;">
+              <span>Progress</span><span>70%</span>
+            </div>
+            <div style="height:8px;background:#E5E7EB;border-radius:999px;overflow:hidden;">
+              <div style="width:70%;height:100%;background:linear-gradient(90deg,#6C63FF,#00D4AA);border-radius:999px;"></div>
+            </div>
+          </div>
+          <div style="width:100%;max-width:360px;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;font-size:12px;color:#9CA3AF;">
+              <span>Uploading…</span><span>35%</span>
+            </div>
+            <div style="height:8px;background:#E5E7EB;border-radius:999px;overflow:hidden;">
+              <div style="width:35%;height:100%;background:#E8572A;border-radius:999px;"></div>
+            </div>
+          </div>
+          <!-- Spinner -->
+          <div style="display:flex;align-items:center;gap:16px;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6C63FF" stroke-width="2.5" style="animation:spin 0.8s linear infinite;">
+              <path d="M12 2a10 10 0 0110 10" stroke-linecap="round"/>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8572A" stroke-width="2.5" style="animation:spin 0.8s linear infinite;">
+              <path d="M12 2a10 10 0 0110 10" stroke-linecap="round"/>
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2A6BE8" stroke-width="2.5" style="animation:spin 0.8s linear infinite;">
+              <path d="M12 2a10 10 0 0110 10" stroke-linecap="round"/>
+            </svg>
+            <span style="font-size:13px;color:#9CA3AF;">Spinners — LG, MD, SM</span>
+          </div>
+        </div>
+        <div class="component-preview-label">ProgressBar · Determinate variants · Spinner</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- TABLES -->
+      <h2 class="section-title" id="tables">Tables</h2>
+      <p class="section-desc">Structured data display for lists, records, and comparison views.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="padding:0;">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <thead>
+              <tr style="background:#F8F9FC;">
+                <th style="padding:12px 16px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#9CA3AF;border-bottom:2px solid #E5E7EB;">Name</th>
+                <th style="padding:12px 16px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#9CA3AF;border-bottom:2px solid #E5E7EB;">Product</th>
+                <th style="padding:12px 16px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#9CA3AF;border-bottom:2px solid #E5E7EB;">Status</th>
+                <th style="padding:12px 16px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#9CA3AF;border-bottom:2px solid #E5E7EB;">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:12px 16px;border-bottom:1px solid #E5E7EB;font-weight:600;color:#0F1B2D;">Alex Chen</td>
+                <td style="padding:12px 16px;border-bottom:1px solid #E5E7EB;color:#6B7280;">SparkRamp</td>
+                <td style="padding:12px 16px;border-bottom:1px solid #E5E7EB;"><span class="demo-badge demo-badge-success">Active</span></td>
+                <td style="padding:12px 16px;border-bottom:1px solid #E5E7EB;color:#6B7280;">Admin</td>
+              </tr>
+              <tr style="background:#F8F9FC;">
+                <td style="padding:12px 16px;border-bottom:1px solid #E5E7EB;font-weight:600;color:#0F1B2D;">Maya Patel</td>
+                <td style="padding:12px 16px;border-bottom:1px solid #E5E7EB;color:#6B7280;">StreamOps</td>
+                <td style="padding:12px 16px;border-bottom:1px solid #E5E7EB;"><span class="demo-badge demo-badge-warning">Pending</span></td>
+                <td style="padding:12px 16px;border-bottom:1px solid #E5E7EB;color:#6B7280;">Editor</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 16px;font-weight:600;color:#0F1B2D;">Jordan Kim</td>
+                <td style="padding:12px 16px;color:#6B7280;">ClarityMap</td>
+                <td style="padding:12px 16px;"><span class="demo-badge demo-badge-danger">Inactive</span></td>
+                <td style="padding:12px 16px;color:#6B7280;">Viewer</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="component-preview-label">Table · Striped rows · Badge status cells</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- DROPDOWN -->
+      <h2 class="section-title" id="dropdown">Dropdown</h2>
+      <p class="section-desc">Contextual menus for actions, navigation, and selection — anchored to a trigger element.</p>
+
+      <div class="component-preview">
+        <div class="component-preview-inner" style="align-items:flex-start;padding:40px 32px;gap:40px;">
+          <!-- Dropdown example (shown open) -->
+          <div style="position:relative;">
+            <button class="demo-btn demo-btn-ghost" style="display:inline-flex;align-items:center;gap:8px;">
+              Options
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div style="position:absolute;top:calc(100% + 6px);left:0;min-width:180px;background:white;border:1px solid #E5E7EB;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.12);z-index:10;overflow:hidden;">
+              <div style="padding:4px;">
+                <button style="width:100%;padding:8px 12px;text-align:left;background:none;border:none;border-radius:6px;font-size:14px;color:#0F1B2D;cursor:pointer;display:flex;align-items:center;gap:10px;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                  Edit
+                </button>
+                <button style="width:100%;padding:8px 12px;text-align:left;background:none;border:none;border-radius:6px;font-size:14px;color:#0F1B2D;cursor:pointer;display:flex;align-items:center;gap:10px;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                  Duplicate
+                </button>
+                <div style="height:1px;background:#F1F5F9;margin:4px 0;"></div>
+                <button style="width:100%;padding:8px 12px;text-align:left;background:none;border:none;border-radius:6px;font-size:14px;color:#EF4444;cursor:pointer;display:flex;align-items:center;gap:10px;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="component-preview-label">Dropdown Menu · Shown open · Divider between groups</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="callout callout-success">
+        <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <div class="callout-body">
+          <div class="callout-title">All components in Figma</div>
+          <p class="callout-text">Every component above is available as a fully-built Figma component set with variants, auto-layout, and design tokens. Use the Meridian plugin to generate them all in one click.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TOC -->
+    <div class="toc-sidebar">
+      <div class="toc-wrap">
+        <div class="toc-title">Components</div>
+        <div class="toc-list">
+          <a class="toc-link" href="#buttons">Buttons</a>
+          <a class="toc-link" href="#badges">Badges</a>
+          <a class="toc-link" href="#inputs">Inputs</a>
+          <a class="toc-link" href="#toggles">Toggles & Checks</a>
+          <a class="toc-link" href="#cards">Cards</a>
+          <a class="toc-link" href="#avatars">Avatars</a>
+          <a class="toc-link" href="#modals">Modals</a>
+          <a class="toc-link" href="#toasts">Toasts</a>
+          <a class="toc-link" href="#tooltips">Tooltips</a>
+          <a class="toc-link" href="#navigation">Navigation</a>
+          <a class="toc-link" href="#tabs">Tabs</a>
+          <a class="toc-link" href="#accordion">Accordion</a>
+          <a class="toc-link" href="#carousel">Carousel</a>
+          <a class="toc-link" href="#progress">Progress</a>
+          <a class="toc-link" href="#tables">Tables</a>
+          <a class="toc-link" href="#dropdown">Dropdown</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+</style>
+
+<script src="js/main.js"></script>
+</body>
+</html>

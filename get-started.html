@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started — Prism Design System</title>
+  <meta name="description" content="Set up Prism in your Figma file or codebase in minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Topbar -->
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a class="topbar-logo" href="index.html">
+      <div class="topbar-logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <span class="topbar-logo-name">Prism</span>
+      <span class="topbar-logo-version">v1.0</span>
+    </a>
+  </div>
+  <div class="topbar-center">
+    <div class="search-bar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search components, tokens, patterns…">
+      <span class="search-shortcut">⌘K</span>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <a class="topbar-link" href="get-started.html">Get Started</a>
+    <a class="topbar-link" href="components.html">Components</a>
+    <a class="topbar-github" href="https://github.com/svesplana/Prism-Design-System" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      GitHub
+    </a>
+  </div>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-nav">
+      <span class="sidebar-section-label">Overview</span>
+      <a class="sidebar-item" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Home
+      </a>
+      <a class="sidebar-item active" href="get-started.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Get Started
+      </a>
+      <div class="sidebar-sub">
+        <a class="sidebar-item" href="#designers">For Designers</a>
+        <a class="sidebar-item" href="#developers">For Developers</a>
+        <a class="sidebar-item" href="#figma-plugin">Figma Plugin</a>
+        <a class="sidebar-item" href="#tokens">Design Tokens</a>
+        <a class="sidebar-item" href="#contributing">Contributing</a>
+      </div>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Design</span>
+      <a class="sidebar-item" href="foundations.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+        Foundations
+      </a>
+      <div class="sidebar-sub">
+        <a class="sidebar-item" href="foundations.html#color">Color</a>
+        <a class="sidebar-item" href="foundations.html#typography">Typography</a>
+        <a class="sidebar-item" href="foundations.html#spacing">Spacing</a>
+        <a class="sidebar-item" href="foundations.html#motion">Motion</a>
+      </div>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Components</span>
+      <a class="sidebar-item" href="components.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        All Components
+        <span class="sidebar-badge">25+</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Resources</span>
+      <a class="sidebar-item" href="resources.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        Downloads & Tokens
+        <span class="sidebar-badge new">New</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="content">
+      <p class="page-eyebrow">Getting Started</p>
+      <h1 class="page-title">Set up Prism</h1>
+      <p class="page-lead">Whether you're a designer working in Figma or a developer building with code, Prism is built to get you up and running in minutes.</p>
+
+      <!-- Content Tabs -->
+      <div class="tab-container">
+        <div class="content-tabs">
+          <button class="content-tab active" data-tab="designers">For Designers</button>
+          <button class="content-tab" data-tab="developers">For Developers</button>
+        </div>
+        <div class="tab-pane active" data-pane="designers">
+
+          <div id="designers">
+            <h2 class="section-title">For Designers</h2>
+            <p class="section-desc">Use our Figma plugin to generate a complete design system in your file — with color styles, text styles, and all 25+ components already built.</p>
+
+            <div class="callout callout-info">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <div class="callout-body">
+                <div class="callout-title">Recommended Font</div>
+                <p class="callout-text">The plugin uses <strong>Inter</strong> by default. After installing, swap to <strong>General Sans</strong> for the full Meridian brand look. Download General Sans free from Fontshare.</p>
+              </div>
+            </div>
+
+            <div class="steps" id="figma-plugin">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <div class="step-title">Download the Figma Plugin files</div>
+                  <p class="step-desc">Clone or download the Prism Design System repository from GitHub. The plugin lives in the root folder (manifest.json + code.js + ui.html).</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <div class="step-title">Install locally in Figma</div>
+                  <p class="step-desc">Open Figma Desktop. Go to <strong>Plugins → Development → Import plugin from manifest…</strong> and select the <code>manifest.json</code> file from the downloaded folder.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <div class="step-title">Run the plugin</div>
+                  <p class="step-desc">Open any Figma file. Go to <strong>Plugins → Development → Meridian Design System Builder</strong>. Click <strong>Build Design System →</strong> and watch the magic happen.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <div class="step-title">Explore your 5 pages</div>
+                  <p class="step-desc">The plugin creates: <strong>🏠 Foundations</strong>, <strong>🔥 SparkRamp</strong>, <strong>🌊 StreamOps</strong>, <strong>🔮 ClarityMap</strong>, and <strong>🎨 Icon Library</strong> — each with full component coverage.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <div class="step-title">Swap fonts (optional)</div>
+                  <p class="step-desc">After building, use Figma's font replacement feature to swap Inter for General Sans if you have it installed. This gives you the full Meridian brand look.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2 class="section-title">What gets built</h2>
+            <p class="section-desc">The plugin scaffolds these assets across 5 dedicated pages:</p>
+
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>Page</th>
+                  <th>Contents</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>🏠 Foundations</td>
+                  <td>Color styles, text styles, spacing scale, semantic colors</td>
+                </tr>
+                <tr>
+                  <td>🔥 SparkRamp</td>
+                  <td>All 25+ components in the orange/warm SparkRamp theme</td>
+                </tr>
+                <tr>
+                  <td>🌊 StreamOps</td>
+                  <td>All 25+ components in the blue/calm StreamOps theme</td>
+                </tr>
+                <tr>
+                  <td>🔮 ClarityMap</td>
+                  <td>All 25+ components in the violet/rich ClarityMap theme</td>
+                </tr>
+                <tr>
+                  <td>🎨 Icon Library</td>
+                  <td>30+ Lucide icons in a searchable dark-background grid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="developers">
+          <div id="developers">
+            <h2 class="section-title">For Developers</h2>
+            <p class="section-desc">Prism's design tokens are available as CSS custom properties. Copy-paste them into your project and start building.</p>
+
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <div class="step-title">Clone the repository</div>
+                  <div class="code-block">
+                    <div class="code-block-header">
+                      <span class="code-lang">bash</span>
+                      <button class="code-copy-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        Copy
+                      </button>
+                    </div>
+                    <pre><code>git clone https://github.com/svesplana/Prism-Design-System.git
+cd Prism-Design-System</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <div class="step-title">Add tokens to your project</div>
+                  <p class="step-desc">Copy the CSS custom properties from the tokens file into your project's global stylesheet.</p>
+                  <div class="code-block">
+                    <div class="code-block-header">
+                      <span class="code-lang">css</span>
+                      <button class="code-copy-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        Copy
+                      </button>
+                    </div>
+                    <pre><code>:root {
+  /* Prism Color Tokens */
+  --prism-primary: #6C63FF;
+  --prism-primary-dark: #4F46E5;
+  --prism-accent: #00D4AA;
+  --prism-accent-warm: #F5A623;
+
+  /* Neutral Palette */
+  --prism-gray-50:  #F8F9FC;
+  --prism-gray-100: #F1F5F9;
+  --prism-gray-200: #E5E7EB;
+  --prism-gray-500: #9CA3AF;
+  --prism-gray-700: #4B5563;
+  --prism-gray-900: #0F1B2D;
+
+  /* Spacing Scale (4px base) */
+  --prism-space-1:  4px;
+  --prism-space-2:  8px;
+  --prism-space-3:  12px;
+  --prism-space-4:  16px;
+  --prism-space-6:  24px;
+  --prism-space-8:  32px;
+  --prism-space-12: 48px;
+  --prism-space-16: 64px;
+
+  /* Border Radius */
+  --prism-radius-sm: 4px;
+  --prism-radius-md: 8px;
+  --prism-radius-lg: 12px;
+  --prism-radius-xl: 16px;
+  --prism-radius-full: 9999px;
+
+  /* Typography */
+  --prism-font-sans: 'Inter', sans-serif;
+  --prism-font-mono: 'Roboto Mono', monospace;
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <div class="step-title">Use a product theme</div>
+                  <p class="step-desc">Add a theme class to your root element to activate a product's color palette.</p>
+                  <div class="code-block">
+                    <div class="code-block-header">
+                      <span class="code-lang">css</span>
+                      <button class="code-copy-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        Copy
+                      </button>
+                    </div>
+                    <pre><code>/* SparkRamp Theme (orange/warm) */
+.theme-spark {
+  --prism-brand: #E8572A;
+  --prism-brand-light: #F5A623;
+}
+
+/* StreamOps Theme (blue/calm) */
+.theme-stream {
+  --prism-brand: #2A6BE8;
+  --prism-brand-light: #00D4AA;
+}
+
+/* ClarityMap Theme (violet/rich) */
+.theme-clarity {
+  --prism-brand: #7B2FD4;
+  --prism-brand-light: #00E5FF;
+}</code></pre>
+                  </div>
+                  <div class="code-block">
+                    <div class="code-block-header">
+                      <span class="code-lang">html</span>
+                      <button class="code-copy-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        Copy
+                      </button>
+                    </div>
+                    <pre><code>&lt;body class="theme-spark"&gt;
+  &lt;!-- Your SparkRamp app content --&gt;
+&lt;/body&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <div class="step-title">Build with tokens</div>
+                  <p class="step-desc">Reference tokens in your components for maintainable, themeable UI.</p>
+                  <div class="code-block">
+                    <div class="code-block-header">
+                      <span class="code-lang">css</span>
+                      <button class="code-copy-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        Copy
+                      </button>
+                    </div>
+                    <pre><code>.btn-primary {
+  background: var(--prism-primary);
+  color: white;
+  padding: var(--prism-space-2) var(--prism-space-4);
+  border-radius: var(--prism-radius-md);
+  font-family: var(--prism-font-sans);
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2 class="section-title" id="tokens">Design Token Reference</h2>
+      <p class="section-desc">A quick overview of all token categories in Prism.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Prefix</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Color — Brand</td>
+            <td><code>--prism-primary</code></td>
+            <td><code>#6C63FF</code></td>
+          </tr>
+          <tr>
+            <td>Color — Neutral</td>
+            <td><code>--prism-gray-*</code></td>
+            <td><code>--prism-gray-200: #E5E7EB</code></td>
+          </tr>
+          <tr>
+            <td>Color — Semantic</td>
+            <td><code>--prism-success</code>, <code>--prism-danger</code></td>
+            <td><code>#22C55E</code>, <code>#EF4444</code></td>
+          </tr>
+          <tr>
+            <td>Spacing</td>
+            <td><code>--prism-space-*</code></td>
+            <td><code>--prism-space-4: 16px</code></td>
+          </tr>
+          <tr>
+            <td>Border Radius</td>
+            <td><code>--prism-radius-*</code></td>
+            <td><code>--prism-radius-md: 8px</code></td>
+          </tr>
+          <tr>
+            <td>Typography</td>
+            <td><code>--prism-font-*</code></td>
+            <td><code>--prism-font-sans: 'Inter'</code></td>
+          </tr>
+          <tr>
+            <td>Product Themes</td>
+            <td><code>--prism-brand</code></td>
+            <td>Set via <code>.theme-spark</code> / <code>.theme-stream</code> / <code>.theme-clarity</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="divider"></div>
+
+      <h2 class="section-title" id="contributing">Contributing</h2>
+      <p class="section-desc">Prism is open source under the MIT license. We welcome contributions of all kinds.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon" style="background:#6C63FF15;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6C63FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>Report Issues</h3>
+          <p>Found a bug or have a feature request? Open an issue on GitHub.</p>
+          <a class="card-link" href="https://github.com/svesplana/Prism-Design-System/issues" target="_blank">Open an issue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:#00D4AA15;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00D4AA" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Submit a PR</h3>
+          <p>Have an improvement ready? Fork the repo and submit a pull request.</p>
+          <a class="card-link" href="https://github.com/svesplana/Prism-Design-System/pulls" target="_blank">View pull requests <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TOC -->
+    <div class="toc-sidebar">
+      <div class="toc-wrap">
+        <div class="toc-title">On this page</div>
+        <div class="toc-list">
+          <a class="toc-link" href="#designers">For Designers</a>
+          <a class="toc-link sub" href="#figma-plugin">Figma Plugin</a>
+          <a class="toc-link" href="#developers">For Developers</a>
+          <a class="toc-link" href="#tokens">Token Reference</a>
+          <a class="toc-link" href="#contributing">Contributing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

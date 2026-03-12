@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — Prism Design System</title>
+  <meta name="description" content="Download Figma files, design tokens, icon packs, and developer assets for Prism.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a class="topbar-logo" href="index.html">
+      <div class="topbar-logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <span class="topbar-logo-name">Prism</span>
+      <span class="topbar-logo-version">v1.0</span>
+    </a>
+  </div>
+  <div class="topbar-center">
+    <div class="search-bar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search components, tokens, patterns…">
+      <span class="search-shortcut">⌘K</span>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <a class="topbar-link" href="get-started.html">Get Started</a>
+    <a class="topbar-link" href="components.html">Components</a>
+    <a class="topbar-github" href="https://github.com/svesplana/Prism-Design-System" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      GitHub
+    </a>
+  </div>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-nav">
+      <span class="sidebar-section-label">Overview</span>
+      <a class="sidebar-item" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Home
+      </a>
+      <a class="sidebar-item" href="get-started.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Get Started
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Design</span>
+      <a class="sidebar-item" href="foundations.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+        Foundations
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Components</span>
+      <a class="sidebar-item" href="components.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        All Components
+        <span class="sidebar-badge">25+</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Resources</span>
+      <a class="sidebar-item active" href="resources.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        Downloads & Tokens
+        <span class="sidebar-badge new">New</span>
+      </a>
+      <div class="sidebar-sub">
+        <a class="sidebar-item" href="#figma">Figma Files</a>
+        <a class="sidebar-item" href="#tokens">Token JSON</a>
+        <a class="sidebar-item" href="#icons">Icons</a>
+        <a class="sidebar-item" href="#fonts">Fonts</a>
+        <a class="sidebar-item" href="#github">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="content">
+      <p class="page-eyebrow">Resources</p>
+      <h1 class="page-title">Downloads & Assets</h1>
+      <p class="page-lead">Everything you need to start using Prism — Figma files, token exports, icon packs, and source code.</p>
+
+      <!-- FIGMA FILES -->
+      <h2 class="section-title" id="figma">Figma Files</h2>
+      <p class="section-desc">Use our Figma plugin to generate the full design system locally in any Figma file. No shared library fees, no subscription needed.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon" style="background:#F24E1E22;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F24E1E" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 2v10"/><circle cx="12" cy="17" r="2"/></svg>
+          </div>
+          <h3>Prism Full Kit</h3>
+          <p>Complete design system with all 5 pages — foundations, 3 product themes, and icon library. Generated via plugin.</p>
+          <a class="card-link" href="get-started.html#figma-plugin">Install Plugin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:#F24E1E22;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F24E1E" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3>Foundations Only</h3>
+          <p>Just the color styles, text styles, and spacing tokens — ideal as a base for your own custom component library.</p>
+          <a class="card-link" href="get-started.html#figma-plugin">Install Plugin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:#F24E1E22;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F24E1E" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Icon Library</h3>
+          <p>30+ Lucide icons pre-arranged in a dark-background grid — ready to use in your Figma designs.</p>
+          <a class="card-link" href="get-started.html#figma-plugin">Install Plugin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+
+      <div class="callout callout-info">
+        <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div class="callout-body">
+          <div class="callout-title">Plugin generates everything locally</div>
+          <p class="callout-text">Because Prism is plugin-based, you own the generated Figma file completely. No external library dependencies — everything lives in your own Figma workspace.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- TOKENS JSON -->
+      <h2 class="section-title" id="tokens">Design Token JSON</h2>
+      <p class="section-desc">Export Prism's tokens as JSON for use with Style Dictionary, Theo, or any token pipeline.</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang">json</span>
+          <button class="code-copy-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            Copy
+          </button>
+        </div>
+        <pre><code>{
+  "color": {
+    "brand": {
+      "primary":       { "value": "#6C63FF", "type": "color" },
+      "primary-dark":  { "value": "#4F46E5", "type": "color" },
+      "primary-light": { "value": "#8B85FF", "type": "color" },
+      "accent":        { "value": "#00D4AA", "type": "color" },
+      "accent-warm":   { "value": "#F5A623", "type": "color" }
+    },
+    "neutral": {
+      "50":  { "value": "#F8F9FC", "type": "color" },
+      "100": { "value": "#F1F5F9", "type": "color" },
+      "200": { "value": "#E5E7EB", "type": "color" },
+      "500": { "value": "#9CA3AF", "type": "color" },
+      "700": { "value": "#4B5563", "type": "color" },
+      "900": { "value": "#0F1B2D", "type": "color" }
+    },
+    "semantic": {
+      "success": { "value": "#22C55E", "type": "color" },
+      "danger":  { "value": "#EF4444", "type": "color" },
+      "warning": { "value": "#F59E0B", "type": "color" },
+      "info":    { "value": "#3B82F6", "type": "color" }
+    },
+    "product": {
+      "spark":   { "value": "#E8572A", "type": "color" },
+      "stream":  { "value": "#2A6BE8", "type": "color" },
+      "clarity": { "value": "#7B2FD4", "type": "color" }
+    }
+  },
+  "spacing": {
+    "1":  { "value": "4px",  "type": "spacing" },
+    "2":  { "value": "8px",  "type": "spacing" },
+    "3":  { "value": "12px", "type": "spacing" },
+    "4":  { "value": "16px", "type": "spacing" },
+    "6":  { "value": "24px", "type": "spacing" },
+    "8":  { "value": "32px", "type": "spacing" },
+    "12": { "value": "48px", "type": "spacing" },
+    "16": { "value": "64px", "type": "spacing" }
+  },
+  "borderRadius": {
+    "sm":   { "value": "4px",    "type": "borderRadius" },
+    "md":   { "value": "8px",    "type": "borderRadius" },
+    "lg":   { "value": "12px",   "type": "borderRadius" },
+    "xl":   { "value": "16px",   "type": "borderRadius" },
+    "full": { "value": "9999px", "type": "borderRadius" }
+  }
+}</code></pre>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ICONS -->
+      <h2 class="section-title" id="icons">Lucide Icons</h2>
+      <p class="section-desc">Prism uses <strong>Lucide</strong> — a clean, consistent open-source icon library (MIT license, fork of Feather Icons).</p>
+
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+        <div class="card">
+          <h3>30+ Icons Included</h3>
+          <p>Search, Plus, X, Check, ChevronDown, ArrowRight, Settings, User, Bell, Home, Grid, Star, and more.</p>
+        </div>
+        <div class="card">
+          <h3>MIT License</h3>
+          <p>Free for personal and commercial use. No attribution required (though appreciated).</p>
+          <a class="card-link" href="https://lucide.dev" target="_blank">Lucide.dev <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <div class="card">
+          <h3>SVG Format</h3>
+          <p>All icons are inline SVG — sharp at any size, colorable via CSS, and accessible with proper aria labels.</p>
+        </div>
+      </div>
+
+      <!-- Icon Grid preview -->
+      <div style="background:#0F1B2D;border-radius:12px;padding:32px;display:flex;flex-wrap:wrap;gap:16px;margin-bottom:24px;justify-content:center;">
+        <!-- Row of common Lucide icons -->
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">search</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">plus</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">x</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">check</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">chevron-down</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">arrow-right</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">settings</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">user</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">bell</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">home</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">star</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <span style="font-size:10px;color:#475569;font-family:monospace;">upload</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- FONTS -->
+      <h2 class="section-title" id="fonts">Typography & Fonts</h2>
+      <p class="section-desc">Prism ships with Inter as the default. We recommend swapping to General Sans for the full Meridian brand experience.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>Font</th>
+            <th>Role</th>
+            <th>License</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Inter</td>
+            <td>Default sans-serif (plugin default)</td>
+            <td>SIL OFL (free)</td>
+            <td><a href="https://rsms.me/inter/" target="_blank" style="color:#6C63FF;">rsms.me/inter</a></td>
+          </tr>
+          <tr>
+            <td>General Sans</td>
+            <td>Recommended brand font (swap after install)</td>
+            <td>Free via Fontshare</td>
+            <td><a href="https://www.fontshare.com/fonts/general-sans" target="_blank" style="color:#6C63FF;">fontshare.com</a></td>
+          </tr>
+          <tr>
+            <td>Roboto Mono</td>
+            <td>Monospace (code blocks)</td>
+            <td>Apache 2.0 (free)</td>
+            <td><a href="https://fonts.google.com/specimen/Roboto+Mono" target="_blank" style="color:#6C63FF;">Google Fonts</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="divider"></div>
+
+      <!-- GITHUB -->
+      <h2 class="section-title" id="github">GitHub Repository</h2>
+      <p class="section-desc">The Prism source code — Figma plugin, documentation site, and token files — lives on GitHub.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon" style="background:#0F1B2D22;">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="color:#0F1B2D;"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </div>
+          <h3>Source Code</h3>
+          <p>The full Figma plugin source (code.js, ui.html, manifest.json) and this documentation site.</p>
+          <a class="card-link" href="https://github.com/svesplana/Prism-Design-System" target="_blank">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:#6C63FF15;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6C63FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>Issues & Feedback</h3>
+          <p>Found a bug or have a feature request? Open an issue on GitHub and we'll take a look.</p>
+          <a class="card-link" href="https://github.com/svesplana/Prism-Design-System/issues" target="_blank">Open Issue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:#22C55E15;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Contribute</h3>
+          <p>PRs welcome! Fork the repo, make your changes, and submit a pull request. MIT licensed.</p>
+          <a class="card-link" href="https://github.com/svesplana/Prism-Design-System/pulls" target="_blank">Pull Requests <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- License -->
+      <h2 class="section-title">License</h2>
+      <div style="background:var(--surface-code);border-radius:12px;padding:24px;margin-bottom:24px;">
+        <pre style="margin:0;"><code style="color:#94A3B8;font-size:13px;line-height:1.7;">MIT License
+
+Copyright (c) 2024 Meridian / svesplana
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.</code></pre>
+      </div>
+      <p style="font-size:13px;color:var(--text-muted);">Icons by <a href="https://lucide.dev" target="_blank">Lucide</a> (ISC License). Fonts: Inter (SIL OFL), Roboto Mono (Apache 2.0). General Sans (Fontshare Free License).</p>
+
+    </div>
+
+    <!-- TOC -->
+    <div class="toc-sidebar">
+      <div class="toc-wrap">
+        <div class="toc-title">On this page</div>
+        <div class="toc-list">
+          <a class="toc-link" href="#figma">Figma Files</a>
+          <a class="toc-link" href="#tokens">Token JSON</a>
+          <a class="toc-link" href="#icons">Icons</a>
+          <a class="toc-link" href="#fonts">Fonts</a>
+          <a class="toc-link" href="#github">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

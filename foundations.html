@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundations — Prism Design System</title>
+  <meta name="description" content="Color, typography, spacing, motion, and elevation tokens powering Prism.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a class="topbar-logo" href="index.html">
+      <div class="topbar-logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <span class="topbar-logo-name">Prism</span>
+      <span class="topbar-logo-version">v1.0</span>
+    </a>
+  </div>
+  <div class="topbar-center">
+    <div class="search-bar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search components, tokens, patterns…">
+      <span class="search-shortcut">⌘K</span>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <a class="topbar-link" href="get-started.html">Get Started</a>
+    <a class="topbar-link" href="components.html">Components</a>
+    <a class="topbar-github" href="https://github.com/svesplana/Prism-Design-System" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      GitHub
+    </a>
+  </div>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-nav">
+      <span class="sidebar-section-label">Overview</span>
+      <a class="sidebar-item" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Home
+      </a>
+      <a class="sidebar-item" href="get-started.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Get Started
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Design</span>
+      <a class="sidebar-item active" href="foundations.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+        Foundations
+      </a>
+      <div class="sidebar-sub">
+        <a class="sidebar-item" href="#color">Color</a>
+        <a class="sidebar-item" href="#typography">Typography</a>
+        <a class="sidebar-item" href="#spacing">Spacing</a>
+        <a class="sidebar-item" href="#motion">Motion</a>
+        <a class="sidebar-item" href="#elevation">Elevation</a>
+        <a class="sidebar-item" href="#grid">Grid</a>
+      </div>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Components</span>
+      <a class="sidebar-item" href="components.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        All Components
+        <span class="sidebar-badge">25+</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Resources</span>
+      <a class="sidebar-item" href="resources.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        Downloads & Tokens
+      </a>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="content">
+      <p class="page-eyebrow">Foundations</p>
+      <h1 class="page-title">Design Tokens</h1>
+      <p class="page-lead">Prism's foundations are the raw design decisions — colors, type, spacing — encoded as tokens that flow through every component.</p>
+
+      <!-- COLOR -->
+      <h2 class="section-title" id="color">Color</h2>
+      <p class="section-desc">Prism uses a structured color palette: a shared neutral base, semantic colors, and three product accent palettes.</p>
+
+      <h3 class="subsection-title">Brand</h3>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#6C63FF;"></div>
+          <div class="swatch-info"><span class="swatch-name">Primary</span><span class="swatch-hex">#6C63FF</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#4F46E5;"></div>
+          <div class="swatch-info"><span class="swatch-name">Primary Dark</span><span class="swatch-hex">#4F46E5</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#8B85FF;"></div>
+          <div class="swatch-info"><span class="swatch-name">Primary Light</span><span class="swatch-hex">#8B85FF</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#00D4AA;"></div>
+          <div class="swatch-info"><span class="swatch-name">Accent</span><span class="swatch-hex">#00D4AA</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#F5A623;"></div>
+          <div class="swatch-info"><span class="swatch-name">Accent Warm</span><span class="swatch-hex">#F5A623</span></div>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Neutral Palette</h3>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="swatch-color" style="background:#F8F9FC; border-bottom:1px solid #E5E7EB;"></div><div class="swatch-info"><span class="swatch-name">Gray 50</span><span class="swatch-hex">#F8F9FC</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#F1F5F9;"></div><div class="swatch-info"><span class="swatch-name">Gray 100</span><span class="swatch-hex">#F1F5F9</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#E5E7EB;"></div><div class="swatch-info"><span class="swatch-name">Gray 200</span><span class="swatch-hex">#E5E7EB</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#9CA3AF;"></div><div class="swatch-info"><span class="swatch-name">Gray 500</span><span class="swatch-hex">#9CA3AF</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#4B5563;"></div><div class="swatch-info"><span class="swatch-name">Gray 700</span><span class="swatch-hex">#4B5563</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#0F1B2D;"></div><div class="swatch-info"><span class="swatch-name">Gray 900</span><span class="swatch-hex">#0F1B2D</span></div></div>
+      </div>
+
+      <h3 class="subsection-title">Semantic</h3>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="swatch-color" style="background:#22C55E;"></div><div class="swatch-info"><span class="swatch-name">Success</span><span class="swatch-hex">#22C55E</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#EF4444;"></div><div class="swatch-info"><span class="swatch-name">Danger</span><span class="swatch-hex">#EF4444</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#F59E0B;"></div><div class="swatch-info"><span class="swatch-name">Warning</span><span class="swatch-hex">#F59E0B</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#3B82F6;"></div><div class="swatch-info"><span class="swatch-name">Info</span><span class="swatch-hex">#3B82F6</span></div></div>
+      </div>
+
+      <h3 class="subsection-title">Product Palettes</h3>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="swatch-color" style="background:#E8572A;"></div><div class="swatch-info"><span class="swatch-name">SparkRamp</span><span class="swatch-hex">#E8572A</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#F5A623;"></div><div class="swatch-info"><span class="swatch-name">SparkRamp Light</span><span class="swatch-hex">#F5A623</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#2A6BE8;"></div><div class="swatch-info"><span class="swatch-name">StreamOps</span><span class="swatch-hex">#2A6BE8</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#00D4AA;"></div><div class="swatch-info"><span class="swatch-name">StreamOps Accent</span><span class="swatch-hex">#00D4AA</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#7B2FD4;"></div><div class="swatch-info"><span class="swatch-name">ClarityMap</span><span class="swatch-hex">#7B2FD4</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#00E5FF;"></div><div class="swatch-info"><span class="swatch-name">ClarityMap Accent</span><span class="swatch-hex">#00E5FF</span></div></div>
+      </div>
+
+      <div class="callout callout-info">
+        <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div class="callout-body">
+          <div class="callout-title">Accessibility</div>
+          <p class="callout-text">All text/background color combinations in Prism meet WCAG AA contrast ratio (4.5:1 for normal text, 3:1 for large text). Use the semantic surface tokens for accessible surfaces automatically.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- TYPOGRAPHY -->
+      <h2 class="section-title" id="typography">Typography</h2>
+      <p class="section-desc">Prism uses <strong>Inter</strong> as the primary sans-serif and <strong>Roboto Mono</strong> for code. The scale follows a modular 1.25× ratio.</p>
+
+      <div class="type-scale">
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-label">Display</div>
+            <div class="type-spec">52px / 900 / -4%</div>
+          </div>
+          <div class="type-sample" style="font-size:40px;font-weight:900;letter-spacing:-0.04em;line-height:1.08;">Prism</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-label">H1</div>
+            <div class="type-spec">36px / 800 / -3%</div>
+          </div>
+          <div class="type-sample" style="font-size:32px;font-weight:800;letter-spacing:-0.03em;">Page Title</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-label">H2</div>
+            <div class="type-spec">24px / 700 / -2%</div>
+          </div>
+          <div class="type-sample" style="font-size:24px;font-weight:700;letter-spacing:-0.02em;">Section Title</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-label">H3</div>
+            <div class="type-spec">18px / 700 / -1%</div>
+          </div>
+          <div class="type-sample" style="font-size:18px;font-weight:700;letter-spacing:-0.01em;">Subsection</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-label">Body Large</div>
+            <div class="type-spec">17px / 400 / 0</div>
+          </div>
+          <div class="type-sample" style="font-size:17px;font-weight:400;color:#4B5563;">The quick brown fox jumps over the lazy dog</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-label">Body</div>
+            <div class="type-spec">15px / 400 / 0</div>
+          </div>
+          <div class="type-sample" style="font-size:15px;font-weight:400;color:#4B5563;">The quick brown fox jumps over the lazy dog</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-label">Small</div>
+            <div class="type-spec">13px / 400 / 0</div>
+          </div>
+          <div class="type-sample" style="font-size:13px;font-weight:400;color:#4B5563;">The quick brown fox jumps over the lazy dog</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-label">Label / Caption</div>
+            <div class="type-spec">11px / 600 / +8%</div>
+          </div>
+          <div class="type-sample" style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9CA3AF;">Label Text</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-label">Code</div>
+            <div class="type-spec">13px / Mono / 0</div>
+          </div>
+          <div class="type-sample" style="font-size:13px;font-family:'Roboto Mono',monospace;color:#4F46E5;background:#F1F5F9;padding:4px 8px;border-radius:4px;display:inline-block;">const prism = true;</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- SPACING -->
+      <h2 class="section-title" id="spacing">Spacing</h2>
+      <p class="section-desc">Prism uses a 4px base unit. All spacing values are multiples of 4.</p>
+
+      <div class="spacing-scale">
+        <div class="spacing-row">
+          <div class="spacing-label">space-1</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:2.5%;"></div></div>
+          <div class="spacing-value">4px</div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">space-2</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:5%;"></div></div>
+          <div class="spacing-value">8px</div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">space-3</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:7.5%;"></div></div>
+          <div class="spacing-value">12px</div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">space-4</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:10%;"></div></div>
+          <div class="spacing-value">16px</div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">space-5</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:12.5%;"></div></div>
+          <div class="spacing-value">20px</div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">space-6</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:15%;"></div></div>
+          <div class="spacing-value">24px</div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">space-8</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:20%;"></div></div>
+          <div class="spacing-value">32px</div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">space-10</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:25%;"></div></div>
+          <div class="spacing-value">40px</div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">space-12</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:30%;"></div></div>
+          <div class="spacing-value">48px</div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">space-16</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:40%;"></div></div>
+          <div class="spacing-value">64px</div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">space-20</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:50%;"></div></div>
+          <div class="spacing-value">80px</div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">space-24</div>
+          <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:60%;"></div></div>
+          <div class="spacing-value">96px</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- MOTION -->
+      <h2 class="section-title" id="motion">Motion</h2>
+      <p class="section-desc">Motion in Prism is purposeful — used to communicate state changes and guide attention, never decorative.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>Token</th>
+            <th>Duration</th>
+            <th>Easing</th>
+            <th>Use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>duration-fast</code></td>
+            <td>100ms</td>
+            <td>ease-out</td>
+            <td>Hover states, small opacity changes</td>
+          </tr>
+          <tr>
+            <td><code>duration-base</code></td>
+            <td>200ms</td>
+            <td>ease</td>
+            <td>Button press, toggle, color transitions</td>
+          </tr>
+          <tr>
+            <td><code>duration-slow</code></td>
+            <td>350ms</td>
+            <td>ease-in-out</td>
+            <td>Modal open/close, slide-in panels</td>
+          </tr>
+          <tr>
+            <td><code>duration-slower</code></td>
+            <td>500ms</td>
+            <td>cubic-bezier(0.34,1.56,0.64,1)</td>
+            <td>Spring entrance animations</td>
+          </tr>
+          <tr>
+            <td><code>duration-progress</code></td>
+            <td>400ms</td>
+            <td>ease</td>
+            <td>Progress bars, loading indicators</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-warning">
+        <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div class="callout-body">
+          <div class="callout-title">Reduced Motion</div>
+          <p class="callout-text">Always respect <code>prefers-reduced-motion</code>. Wrap non-essential transitions in a media query to disable animations for users who request it.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ELEVATION -->
+      <h2 class="section-title" id="elevation">Elevation</h2>
+      <p class="section-desc">Shadows communicate depth. Prism uses three levels of elevation.</p>
+
+      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:32px;">
+        <div style="background:white;border-radius:12px;padding:24px 32px;box-shadow:0 1px 3px rgba(0,0,0,0.06);border:1px solid #E5E7EB;">
+          <div style="font-size:13px;font-weight:700;color:#0F1B2D;margin-bottom:4px;">Elevation 1</div>
+          <div style="font-size:12px;color:#9CA3AF;font-family:monospace;">0 1px 3px rgba(0,0,0,0.06)</div>
+        </div>
+        <div style="background:white;border-radius:12px;padding:24px 32px;box-shadow:0 4px 16px rgba(0,0,0,0.08);">
+          <div style="font-size:13px;font-weight:700;color:#0F1B2D;margin-bottom:4px;">Elevation 2</div>
+          <div style="font-size:12px;color:#9CA3AF;font-family:monospace;">0 4px 16px rgba(0,0,0,0.08)</div>
+        </div>
+        <div style="background:white;border-radius:12px;padding:24px 32px;box-shadow:0 8px 32px rgba(0,0,0,0.12);">
+          <div style="font-size:13px;font-weight:700;color:#0F1B2D;margin-bottom:4px;">Elevation 3</div>
+          <div style="font-size:12px;color:#9CA3AF;font-family:monospace;">0 8px 32px rgba(0,0,0,0.12)</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- GRID -->
+      <h2 class="section-title" id="grid">Grid & Layout</h2>
+      <p class="section-desc">Prism uses a 12-column grid with consistent gutters at each breakpoint.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>Breakpoint</th>
+            <th>Min Width</th>
+            <th>Columns</th>
+            <th>Gutter</th>
+            <th>Margin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mobile</td>
+            <td>0px</td>
+            <td>4</td>
+            <td>16px</td>
+            <td>16px</td>
+          </tr>
+          <tr>
+            <td>Tablet</td>
+            <td>768px</td>
+            <td>8</td>
+            <td>24px</td>
+            <td>24px</td>
+          </tr>
+          <tr>
+            <td>Desktop</td>
+            <td>1024px</td>
+            <td>12</td>
+            <td>24px</td>
+            <td>32px</td>
+          </tr>
+          <tr>
+            <td>Wide</td>
+            <td>1280px</td>
+            <td>12</td>
+            <td>32px</td>
+            <td>48px</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <!-- TOC -->
+    <div class="toc-sidebar">
+      <div class="toc-wrap">
+        <div class="toc-title">On this page</div>
+        <div class="toc-list">
+          <a class="toc-link" href="#color">Color</a>
+          <a class="toc-link sub" href="#color">Brand</a>
+          <a class="toc-link sub" href="#color">Neutrals</a>
+          <a class="toc-link sub" href="#color">Semantic</a>
+          <a class="toc-link sub" href="#color">Products</a>
+          <a class="toc-link" href="#typography">Typography</a>
+          <a class="toc-link" href="#spacing">Spacing</a>
+          <a class="toc-link" href="#motion">Motion</a>
+          <a class="toc-link" href="#elevation">Elevation</a>
+          <a class="toc-link" href="#grid">Grid & Layout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

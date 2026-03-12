@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prism Design System — by Meridian</title>
+  <meta name="description" content="Prism is Meridian's open design system powering SparkRamp, StreamOps, and ClarityMap. Beautiful, accessible, production-ready components.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Topbar -->
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a class="topbar-logo" href="index.html">
+      <div class="topbar-logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <span class="topbar-logo-name">Prism</span>
+      <span class="topbar-logo-version">v1.0</span>
+    </a>
+  </div>
+  <div class="topbar-center">
+    <div class="search-bar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search components, tokens, patterns…">
+      <span class="search-shortcut">⌘K</span>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <a class="topbar-link" href="get-started.html">Get Started</a>
+    <a class="topbar-link" href="components.html">Components</a>
+    <a class="topbar-github" href="https://github.com/svesplana/Prism-Design-System" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      GitHub
+    </a>
+  </div>
+</header>
+
+<!-- Mobile overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="sidebar-nav">
+      <span class="sidebar-section-label">Overview</span>
+      <a class="sidebar-item active" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Home
+      </a>
+      <a class="sidebar-item" href="get-started.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Get Started
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Design</span>
+      <a class="sidebar-item" href="foundations.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+        Foundations
+      </a>
+      <div class="sidebar-sub">
+        <a class="sidebar-item" href="foundations.html#color">Color</a>
+        <a class="sidebar-item" href="foundations.html#typography">Typography</a>
+        <a class="sidebar-item" href="foundations.html#spacing">Spacing</a>
+        <a class="sidebar-item" href="foundations.html#motion">Motion</a>
+      </div>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Components</span>
+      <a class="sidebar-item" href="components.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        All Components
+        <span class="sidebar-badge">25+</span>
+      </a>
+      <div class="sidebar-sub">
+        <a class="sidebar-item" href="components.html#buttons">Buttons</a>
+        <a class="sidebar-item" href="components.html#inputs">Inputs</a>
+        <a class="sidebar-item" href="components.html#cards">Cards</a>
+        <a class="sidebar-item" href="components.html#badges">Badges</a>
+        <a class="sidebar-item" href="components.html#modals">Modals</a>
+        <a class="sidebar-item" href="components.html#navigation">Navigation</a>
+      </div>
+
+      <div class="sidebar-divider"></div>
+      <span class="sidebar-section-label">Resources</span>
+      <a class="sidebar-item" href="resources.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        Downloads & Tokens
+        <span class="sidebar-badge new">New</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="content">
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Meridian · Design System
+        </div>
+        <h1>Build faster with<br><span>Prism</span></h1>
+        <p class="hero-desc">
+          An open, opinionated design system for Meridian products. 25+ production-ready components, design tokens, and Figma resources — all under one roof.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="get-started.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Get Started
+          </a>
+          <a class="btn btn-outline" href="components.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Browse Components
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/svesplana/Prism-Design-System" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <span class="hero-stat-number">25+</span>
+            <span class="hero-stat-label">Components</span>
+          </div>
+          <div>
+            <span class="hero-stat-number">5</span>
+            <span class="hero-stat-label">Page Templates</span>
+          </div>
+          <div>
+            <span class="hero-stat-number">3</span>
+            <span class="hero-stat-label">Product Themes</span>
+          </div>
+          <div>
+            <span class="hero-stat-number">MIT</span>
+            <span class="hero-stat-label">License</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Features -->
+      <p class="page-eyebrow">Why Prism</p>
+      <h2 class="section-title">Everything in one system</h2>
+      <p class="section-desc">Prism gives designers and developers a shared language — from tokens to production code.</p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#6C63FF15;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6C63FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3>Design Tokens</h3>
+          <p>Color, spacing, typography, and motion defined as single-source-of-truth tokens shared between Figma and code.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#00D4AA15;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00D4AA" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3>25+ Components</h3>
+          <p>Buttons, inputs, modals, carousels, accordions — every component you need with full variant coverage.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#F5A62315;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>Figma Plugin</h3>
+          <p>Install our Figma plugin to scaffold a complete design system in minutes — styles, components, and icons ready to use.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#E8572A15;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#E8572A" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Multi-Theme</h3>
+          <p>Three distinct product themes — SparkRamp orange, StreamOps blue, ClarityMap violet — sharing the same component API.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#7B2FD415;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7B2FD4" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Lucide Icons</h3>
+          <p>Over 30 crisp SVG icons from Lucide (MIT license) baked into the system — with a full icon library page in Figma.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:#2A6BE815;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2A6BE8" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Open Source</h3>
+          <p>MIT licensed. Use it freely for personal and commercial projects. Contributions welcome on GitHub.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Products -->
+      <p class="page-eyebrow">Built for</p>
+      <h2 class="section-title">Three products, one design language</h2>
+      <p class="section-desc">Prism is the shared foundation across all Meridian products — keeping experiences consistent while letting each product shine.</p>
+
+      <div class="product-band">
+        <div class="product-tab">
+          <div class="product-tab-dot" style="background:#E8572A;"></div>
+          <h4>🔥 SparkRamp</h4>
+          <p>Growth & launch platform. Energetic orange palette with bold, action-oriented UI patterns.</p>
+        </div>
+        <div class="product-tab">
+          <div class="product-tab-dot" style="background:#2A6BE8;"></div>
+          <h4>🌊 StreamOps</h4>
+          <p>Operations & workflow automation. Calm blue palette with data-dense, efficient layouts.</p>
+        </div>
+        <div class="product-tab">
+          <div class="product-tab-dot" style="background:#7B2FD4;"></div>
+          <h4>🔮 ClarityMap</h4>
+          <p>Analytics & intelligence. Rich violet palette with clear data visualization patterns.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Quick links -->
+      <p class="page-eyebrow">Quick Access</p>
+      <h2 class="section-title">Where do you want to go?</h2>
+
+      <div class="card-grid">
+        <a class="card" href="get-started.html" style="text-decoration:none;">
+          <div class="card-icon" style="background:#6C63FF15;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6C63FF" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <h3>Quick Start</h3>
+          <p>Set up Prism in your project or Figma file in under 5 minutes.</p>
+          <span class="card-link">Get started <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="foundations.html" style="text-decoration:none;">
+          <div class="card-icon" style="background:#00D4AA15;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00D4AA" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3>Foundations</h3>
+          <p>Learn the color, type, and spacing tokens that underpin every component.</p>
+          <span class="card-link">Explore tokens <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="components.html" style="text-decoration:none;">
+          <div class="card-icon" style="background:#F5A62315;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3>Components</h3>
+          <p>Browse all 25+ components with interactive previews and usage guidelines.</p>
+          <span class="card-link">View components <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="card" href="resources.html" style="text-decoration:none;">
+          <div class="card-icon" style="background:#E8572A15;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#E8572A" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <h3>Resources</h3>
+          <p>Download Figma files, token JSON, and icon packs for your projects.</p>
+          <span class="card-link">Download <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Changelog -->
+      <p class="page-eyebrow">Changelog</p>
+      <h2 class="section-title">Recent updates</h2>
+      <div class="changelog">
+        <div class="changelog-item">
+          <div class="changelog-version">v1.0.0</div>
+          <div class="changelog-content">
+            <h4>Initial Release <span class="changelog-tag new-tag">New</span></h4>
+            <p>25+ components, 3 product themes, Lucide icon library, and the Meridian Figma plugin.</p>
+          </div>
+        </div>
+        <div class="changelog-item">
+          <div class="changelog-version">v0.9.0</div>
+          <div class="changelog-content">
+            <h4>Accordion, Carousel, Image Slider <span class="changelog-tag new-tag">New</span></h4>
+            <p>Added complex interactive components with full variant coverage.</p>
+          </div>
+        </div>
+        <div class="changelog-item">
+          <div class="changelog-version">v0.8.0</div>
+          <div class="changelog-content">
+            <h4>Auto-layout overhaul <span class="changelog-tag fix-tag">Fix</span></h4>
+            <p>Rebuilt all components with proper Figma auto-layout — no more manual position stacking.</p>
+          </div>
+        </div>
+        <div class="changelog-item">
+          <div class="changelog-version">v0.7.0</div>
+          <div class="changelog-content">
+            <h4>Lucide SVG icons <span class="changelog-tag new-tag">New</span></h4>
+            <p>Replaced placeholder shapes with real Lucide icon paths across all components.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- no right TOC on homepage -->
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
