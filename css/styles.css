@@ -34,7 +34,7 @@
 
   /* Sidebar */
   --sidebar-width: 260px;
-  --topbar-height: 60px;
+  --topbar-height: 0px;
 
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
